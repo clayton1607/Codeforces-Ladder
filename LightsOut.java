@@ -36,24 +36,40 @@ public class LightsOut {
                         lights[i][j]=0;
                     else    
                         lights[i][j]=1;
-                    for(int k=0;k<3;k++){
-                        if(j==k)
-                            continue;
-                        if(lights[i][k] == 1)
-                            lights[i][k]=0;
-                        else    
-                            lights[i][k]=1;
-                    }
-
-                    for(int k=0;k<3;k++){
-                        if(i==k)
-                            continue;
-                        if(lights[k][j] == 1)
-                            lights[k][j]=0;
-                        else    
-                            lights[k][j]=1;
-                    }
             
+                    if((i+1)<3){
+                            if(lights[i+1][j]==1)
+                                lights[i+1][j]=0;
+                            else    
+                                lights[i+1][j]=1;
+        
+                        }
+                    
+                    if((i-1)>=0){
+                        if(lights[i-1][j]==1)
+                            lights[i-1][j]=0;
+                        else    
+                            lights[i-1][j]=1;
+    
+                    }
+                        
+                    
+
+                    if((j-1)>=0){
+                        if(lights[i][j-1]==1)
+                            lights[i][j-1]=0;
+                        else    
+                            lights[i][j-1]=1;
+    
+                    }
+                    
+                    if((j+1)<3){
+                        if(lights[i][j+1]==1)
+                            lights[i][j+1]=0;
+                        else    
+                            lights[i][j+1]=1;
+    
+                    }
                 }
             }
         }
