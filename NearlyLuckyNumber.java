@@ -3,10 +3,10 @@ import java.util.Scanner;
 public class NearlyLuckyNumber {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        long x = sc.nextLong();
+        int x = sc.nextint();
         int lucky=0;
         while(x!=0){
-            long temp= x%10;
+            int temp= x%10;
             if(temp==7 || temp==4)
                 lucky++;
             x/=10;
