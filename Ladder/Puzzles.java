@@ -28,6 +28,5 @@ public class Puzzles {
             diff=Math.min(temp, diff);
         }
         System.out.println(diff);
-        sc.close();
     }
 }
